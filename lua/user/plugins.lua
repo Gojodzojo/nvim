@@ -61,9 +61,11 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "neovim/nvim-lspconfig"             -- enable LSP
+  use "williamboman/nvim-lsp-installer"   -- simple to use language server installer
 
+  use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-media-files.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
