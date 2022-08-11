@@ -42,7 +42,7 @@ packer.init {
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"            -- Have packer manage itself
   use "nvim-lua/popup.nvim"               -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim"             -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim"             -- Useful lua functions used in lots of plugins
 
   use 'folke/tokyonight.nvim'             -- Theme
   use 'kyazdani42/nvim-web-devicons'      -- Necessary icons
@@ -50,33 +50,34 @@ return packer.startup(function(use)
   
   -- cmp plugins
   use "hrsh7th/nvim-cmp"                  -- The completion plugin
-  use "hrsh7th/cmp-buffer"                -- buffer completions
-  use "hrsh7th/cmp-path"                  -- path completions
-  use "hrsh7th/cmp-cmdline"               -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip"          -- snippet completions
+  use "hrsh7th/cmp-buffer"                -- Buffer completions
+  use "hrsh7th/cmp-path"                  -- Path completions
+  use "hrsh7th/cmp-cmdline"               -- Cmdline completions
+  use "saadparwaiz1/cmp_luasnip"          -- Snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
   -- snippets
-  use "L3MON4D3/LuaSnip"                  --snippet engine
-  use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
+  use "L3MON4D3/LuaSnip"                  -- Snippet engine
+  use "rafamadriz/friendly-snippets"      -- A bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig"             -- enable LSP
-  use "williamboman/nvim-lsp-installer"   -- simple to use language server installer
-  use "jose-elias-alvarez/null-ls.nvim"   -- for formatters and linters
-  -- Lua
-use {
-  "folke/trouble.nvim",
-}
+  use "neovim/nvim-lspconfig"             -- Enable LSP
+  use "williamboman/nvim-lsp-installer"   -- Simple to use language server installer
+  use "jose-elias-alvarez/null-ls.nvim"   -- For formatters and linters
+  use "folke/trouble.nvim"                -- List of errors in file
 
-  use "nvim-telescope/telescope.nvim"
-  use 'nvim-telescope/telescope-media-files.nvim'
-
-  use {
+  -- Treesitter
+  use {                                   -- Treesitter
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "p00f/nvim-ts-rainbow"
+  use "p00f/nvim-ts-rainbow"              -- Parentheses colorization
+
+  -- Fuzzy finder
+  use "nvim-telescope/telescope.nvim"               -- Telescope
+  use 'nvim-telescope/telescope-media-files.nvim'   -- Preview media files in telescope
+
+  use "lewis6991/gitsigns.nvim"           -- Git integration for buffers
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
